@@ -25,18 +25,8 @@ include Bools
 
 bool :some_query?, true
 bool :other_query?, false
-
-bool :answered?, (meaing_of_life == 42)
-
-bool :can_use_blocks?, true
-
-bool :blocks? { can_use_blocks? }
-
-bool :multiline_blocks? do
-  # ... some code
-  # ... more code
-  can_use_blocks?
-end
+bool :evaluated?, 42 # evaluates to true
+bool :other_evaluated?, nil # evaluates to false
 
 ```
 
