@@ -1,8 +1,6 @@
 # Bools
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bools`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Bool provides a convenient one-liner for your boolean method needs!
 
 ## Installation
 
@@ -20,9 +18,27 @@ Or install it yourself as:
 
     $ gem install bools
 
-## Usage
+## Usage Examples
 
-TODO: Write usage instructions here
+```ruby
+include Bools
+
+bool :some_query?, true
+bool :other_query?, false
+
+bool :answered?, (meaing_of_life == 42)
+
+bool :can_use_blocks?, true
+
+bool :blocks? { can_use_blocks? }
+
+bool :multiline_blocks? do
+  # ... some code
+  # ... more code
+  can_use_blocks?
+end
+
+```
 
 ## Development
 
@@ -38,4 +54,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
